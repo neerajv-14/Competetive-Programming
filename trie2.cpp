@@ -36,6 +36,9 @@
         keep a mini initialized by INT_MAX.  go node by node, if at some point , there is no key: return 0, 
         otherwise do mini = min(mini, node-> getFrequency(curr character));
         at the end : directly return mini.
+
+
+    STRIVER approach : Node{ Node* , int countEndings, int countPrefixEndings}
 */
 class Node{
     public: pair<Node*,int> links[26];
