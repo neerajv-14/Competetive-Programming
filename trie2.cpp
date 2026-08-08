@@ -21,7 +21,7 @@
     COUNT NO OF EXACT WORDS: 
 
      if at any point , there is no link then return 0. to check if there is link, we should check frequency
-     as well. reason: insert a word, remove the same word immediately. here the link is still present, but
+     as well. reason: insert a word, remove the same word immediately. here the link is still present( so checking link alone doesn't gaurantee the path), but
      frequency will be decreased during our erase() method , so we need to check if frequency is >0.
 
      at end: no. of endings is our answer. 
