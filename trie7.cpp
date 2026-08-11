@@ -12,6 +12,12 @@
 	bit as per our idea of maximizing the xor output. let say , our required bit is 1: we will check the minimum that passed through that: if it is less than limit, then only 
 	we will go through that path otherwise we can't maximize this bit, we will go through other one. it is gauranteed that we can traverse through either one of them as we 
 	took edge case of where the limit number is greater than the minimum element of whole array.
+
+	Striver approach - Simplified
+	Instead of solving given queries sequentially, we modify the order of queries to our flexibility. sort the queries in the increasing order of a_i's, don't insert the elements
+	all at once to the trie. sort the given array, maintain a pointer ptr. pick the first query ( in modified order): insert all the elements <= a_i of first query, 
+	and perform getXorMax() function ( it basically becomes prev question), for the next query : update the ptr in such a way trie contains all the elements <= next query's
+	a_i. This process is known as OFFLINE QUERIES. we modified the query order as per our needs.
  */
 
 class Node{
