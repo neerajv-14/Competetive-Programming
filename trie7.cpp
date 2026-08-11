@@ -4,6 +4,14 @@
     obj->insert(word);
     bool check2 = obj->search(word);
     bool check3 = obj->startsWith(prefix);
+
+	approach: 
+	first take the edge case where the limit number is greater than the minimum element of whole array.
+	while inserting the elements:
+	we will store pair<Node*,int> links[2]: meaning at every step, we will store the minimum number that traversed over that path. In this way, when we are selecting the required
+	bit as per our idea of maximizing the xor output. let say , our required bit is 1: we will check the minimum that passed through that: if it is less than limit, then only 
+	we will go through that path otherwise we can't maximize this bit, we will go through other one. it is gauranteed that we can traverse through either one of them as we 
+	took edge case of where the limit number is greater than the minimum element of whole array.
  */
 
 class Node{
